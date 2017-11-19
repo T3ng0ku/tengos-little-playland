@@ -1,0 +1,5 @@
+package-lock.json
+.git
+completeBuild
+node_modules
+create Folder.bat
