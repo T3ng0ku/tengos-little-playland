@@ -7,7 +7,8 @@ class Router {
     app.post('/upload', upload.post());
   }
   download(app: Application) {
-    app.get('/download/:filename', download.get());
+    app.get('/download', download.get());
+    app.get('/download/:filename', download.getFile());
   }
 }
 

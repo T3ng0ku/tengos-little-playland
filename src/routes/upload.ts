@@ -22,9 +22,6 @@ export const post = function (): (req: Request, res: Response) => void {
           new_path = path.join(uploadDir, fields['filename']);
 
           fs.readFile(old_path, (err, data) => {
-            if(!fs.existsSync(uploadDir)) {
-              fs.mkdirSync(uploadDir);
-            }
             fs.writeFile(new_path, data, (err) => {
               fs.unlink(old_path, (result) => {
                 if (result) {
